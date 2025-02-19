@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+  overflow-x: hidden;
+}
+.navbar {
+  position: absolute;
+  top: 14%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 39%; 
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8px 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  z-index: 5;
+}
+
+.navbar img {
+  width: 60px; 
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 6px; 
+}
+
+.nav-item {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px; 
+  transform: scale(1.1);
+}
+
+
+
+.main-banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh; 
+  background: url('./images/v1_4.png') no-repeat center center;
+  background-size: cover; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.airob-logo {
+  position: absolute;
+  top:13%;
+  right: 8.5%; 
+  width: 450px; 
+  height: auto; 
+  max-width: 100%;
+}
+
+.event-details {
+  position: relative;
+  margin-top: 22%;
+  margin-left: 56%;
+  text-align: center;
+}
+
+.event-details h1 {
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Audiowide', sans-serif;
+  font-weight: 200;
+}
+
+.event-details p {
+  font-size: 0.95rem;
+  margin: 10px 0;
+  font-family: "Josefin Sans", serif;
+}
+
+.register-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.4rem;
+  color: #ff4500;
+  text-decoration: none;
+  font-family: 'Audiowide', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #fff;
+  border: none;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.register-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+.logo-section {
+  width: 100%;
+  height: 230px;
+  background-color: #000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -130px;
+}
+
+.logo-container {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-box {
+  width: 200px;
+  height: 120px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border: 5px solid #e2e2e2;
+  z-index: 10;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.logo-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-airob {
+  position: relative;
+  width: 100%;
+  padding: 80px 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.about-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #F36101, #CC5400);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.8;
+  color: #fff;
+  max-width: 600px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.about-text ul li {
+  font-size: 1.1rem;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+
+
