@@ -1,0 +1,1084 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+  overflow-x: hidden;
+}
+.navbar {
+  position: absolute;
+  top: 14%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 39%; 
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar img {
+  width: 60px; 
+  height: auto;
+}
+
+/* Desktop Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 6px;
+}
+
+/* Menu Items */
+.nav-item {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; 
+  position: relative;
+  top: -15px;
+  right: -20px;
+  font-size: 18px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburger.active{
+  transform: rotate(90deg);
+}
+
+
+.main-banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh; 
+  background: url('./images/v1_4.png') no-repeat center center;
+  background-size: cover; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.airob-logo {
+  position: absolute;
+  top:13%;
+  right: 8.5%; 
+  width: 450px; 
+  height: auto; 
+  max-width: 100%;
+}
+
+.event-details {
+  position: relative;
+  margin-top: 22%;
+  margin-left: 56%;
+  text-align: center;
+}
+
+.event-details h1 {
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Audiowide', sans-serif;
+  font-weight: 200;
+}
+
+.event-details p {
+  font-size: 0.95rem;
+  margin: 10px 0;
+  font-family: "Josefin Sans", serif;
+}
+
+.register-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.4rem;
+  color: #ff4500;
+  text-decoration: none;
+  font-family: 'Audiowide', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #fff;
+  border: none;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.register-button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+.logo-section {
+  width: 100%;
+  height: 230px;
+  background-color: #000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -130px;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+.logo-box {
+  width: clamp(100px, 20vw, 200px); 
+  height: clamp(60px, 12vw, 120px);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border: 5px solid #e2e2e2;
+  z-index: 10;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.logo-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-airob {
+  position: relative;
+  width: 100%;
+  padding: 0px 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.about-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #F36101, #CC5400);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  max-width: 1200px;
+}
+.about-image {
+  display: flex;
+  align-items: flex-end;
+}
+
+.about-image img {
+  width: 75%;
+  max-width: 500px;
+  position: relative;
+  top: 15px;
+}
+
+.about-text {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.about-text h2 {
+  font-size: 1.7rem;
+  font-weight: 100;
+  font-family: "Audiowide", sans-serif;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.8;
+  color: #fff;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.about-text ul li {
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  gap: 8px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  font-size: 1rem; 
+  color: #ffffff; 
+}
+
+/*timer*/
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; /* Adjust spacing between text and counter */
+  flex-direction: row; /* Aligns text and counter horizontally */
+}
+
+.countdown-container h2 {
+  font-size: 1.8rem;
+  font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  top: 10px;
+  font-family: "Audiowide", sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.countdown-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  width: 800px;
+  background: linear-gradient(to right, #ff4500, #ff6600);
+  padding: 15px 30px;
+  border-radius: 0;
+  box-shadow: 0px 5px 15px rgba(255, 69, 0, 0.3);
+  gap: 40px;
+  margin-bottom: 100px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.countdown-item span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.countdown-item p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.colon {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.experience-section {
+  text-align: center;
+  padding: 25px 0;
+  background-color: #191919;
+}
+
+.experience-title {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.experience-title img {
+  width: 100px; /* Adjust logo size */
+  height: auto;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.experience-card {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 0px;
+  text-align: left;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(207, 206, 206, 0.708);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(255, 69, 0, 0.6);
+}
+
+.experience-card .icon {
+  font-size: 1.8rem;
+  color: #ff4500;
+}
+
+.experience-card h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.experience-card p {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.experience-badge {
+  position: absolute;
+  font-family: 'Audiowide', sans-serif;
+  bottom: 0;
+  right: 0;
+  background: #ff4500;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 50px;
+}
+.global-event-ic {
+  font-size: 3rem;
+  font-variation-settings:
+    'FILL' 0,  
+    'wght' 700,  
+    'GRAD' 0,  
+    'opsz' 48;
+}
+
+
+/* Section Styling */
+.how-to-participate {
+  background: linear-gradient(to right, #f15a24, #e62e04); /* Matching gradient */
+  text-align: center;
+  padding: 50px 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.how-to-participate h2 {
+  color: #fff;
+  font-family: 'Audiowide', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Participation Cards */
+.participation-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.participation-card {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  min-height: 90px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+  padding: 20px 40px;
+  border-radius: 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.participation-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 25%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  margin-right: 15px;
+  transform: translateY(-50%);
+}
+
+.icon img {
+  width: 30px; /* Adjust icon size */
+  height: 40px;
+}
+
+/* Text Styling */
+.text {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.how-to-participate h2 {
+  font-weight: 500; /* Reduced from bold */
+  font-size: 28px; /* Slightly adjusted size */
+  position: relative;
+  top: -90%;
+}
+.text h3 {
+  color: #d32f2f;
+  font-family: 'Audiowide', sans-serif;
+  white-space: nowrap;
+  font-size: 30px;
+  text-align: left;
+  font-weight: 100;
+}
+
+.text p {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px 0 0;
+  margin-left: auto;
+  text-align: right;
+}
+
+.how-to-participate .icon {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  width: 70px;
+  height: 70px;
+}
+
+/* Target only Material Symbols inside this section */
+.how-to-participate .icon .material-symbols-outlined {
+  font-size: 40px; /* Adjust icon size */
+  color: #fff; /* White icon color */
+}
+
+
+/*ticketing*/
+.ticket-pricing {
+  text-align: center;
+  background: url('./images/reg_bck.png') no-repeat center center/cover;
+  padding: 100px 0;
+  min-height: 600px;
+  position: relative;
+}
+
+.ticket-pricing h2 {
+  color: #ffff;
+  position: relative;
+  top: -80px;
+  line-height: 200%;
+  font-size: 28px;
+  font-family: 'Audiowide', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.ticket-pricing .sub-heading {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  top: -80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.ticket-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.ticket-card {
+  background: #140303;
+  padding: 25px;
+  width: 350px;
+  height: 450px;
+  border-radius: 20px 0px 20px 0px;
+  text-align: center;
+  /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ticket-card h3 {
+  color: #fff;
+  font-family: 'Audiowide', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.ticket-card p {
+  font-family: 'Audiowide', sans-serif;
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.price-tag {
+  background: white;
+  color: red;
+  font-family: 'Audiowide', sans-serif;
+  font-size: 26px;
+  width: 150px;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 15px 0px 15px 0px;
+  display: inline-block;
+  margin: 15px 0;
+  position: relative;
+  margin: auto ;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out, color 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+.price-tag:hover {
+  background: red;
+  color: white;
+  transform: translateY(-50%) scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4); /* Glowing effect */
+}
+
+.ticket-card small {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.visitor-ticket-btn {
+  background: #ff4500;
+  font-family: 'Audiowide', sans-serif;
+  color: #fff;
+  border: none;
+  position: relative;
+  top: 60px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px 0px 30px 0px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.visitor-ticket-btn:hover {
+  background: #e63900;
+}
+
+/*terms*/
+.terms-conditions {
+  text-align: center;
+  background: url('./images/v1_123.png') no-repeat center center/cover;
+  position: relative;
+  padding: 60px 80px;
+  margin-top: 50px; /* Small gap from the registration section */
+  color: white;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+/* Light Gray Overlay */
+.terms-conditions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.855); /* Light Gray with 30% opacity */
+  z-index: 1;
+}
+
+/* Make sure the text appears above the overlay */
+.terms-conditions h2,
+.terms-conditions p,
+.terms-conditions ul {
+  position: relative;
+  z-index: 2;
+}
+
+.terms-conditions h2 {
+  font-family: 'Audiowide', sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.terms-conditions p {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.terms-conditions ul {
+  font-family: 'Audiowide', sans-serif;
+  font-weight: 300;
+  margin-top: 40px;
+  text-align: left;
+  max-width: 700px;
+  margin-left: 150px;
+  white-space: nowrap;
+}
+.terms-conditions li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/*about*/
+.contact-section {
+  position: relative;
+  margin-top: 90px;
+  width: 100vw;
+  height: auto; /* Adjust the height to match your design */
+  overflow: hidden;
+}
+.contact-section h2 {
+  text-align: center;
+  top: -10px;
+}
+
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+/* Fullscreen Map */
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.site-footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  height: 200px; /* Adjust height as needed */
+  margin-top: -110px;
+}
+.footer-top {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.footer-left, .footer-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-left {
+  background: #212121; /* Left half */
+  gap: 15px;
+}
+
+.footer-right {
+  background: linear-gradient(to right, #F36101, #F9330E); /* Right half */
+}
+.footer-logo {
+  max-height: 150px; /* Adjust the size of the logos */
+  margin: 0 10px;
+}
+.vertical-line {
+  width: 1px;
+  height: 95px; /* Adjust height as needed */
+  background-color: white;
+}
+
+/* Right Half - Explore IEEE SB CEK Section */
+.footer-right {
+  background: linear-gradient(to right, #F36101, #F9330E);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Container for text and social icons */
+.explore-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+/* Text Styling */
+.explore-section p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  left: -80px;
+  color: white;
+  margin: 0;
+}
+.explore-section b{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  left: -80px;
+  color: white;
+  font-size: 24px;
+  background: red;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: white;
+  color: red;
+}
+
+.footer-credits {
+  text-align: right;
+  font-family: 'Audiowide', sans-serif;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+  position: relative;
+  right: -250px;
+  top: -20px;
+}
+.team_cek{
+  text-align: right;
+  font-family: 'Audiowide', sans-serif;
+  position: relative;
+  right: 30px;  
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  color: white;
+  padding: 5px 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 14px;
+  max-width: 55%;
+  margin: 0 auto;
+  position: relative;
+  top: -70px;
+  z-index: 10;
+}
+
+.contact-left,
+.contact-center,
+.contact-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.contact-left i,
+.contact-center i,
+.contact-right i {
+  font-size: 18px;
+  color: #F36101;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 40px;
+  background-color: white;
+}
+
+
+
+/*--------------------------mobile------------------------------*/
+
+@media (max-width: 768px) {
+  /* Only Show Logo & Hamburger */
+  .navbar {
+    width: 90%;
+    top: 5%;
+    justify-content: space-between;
+    padding: 10px;
+    background: none; /* Hide navbar background */
+    box-shadow: none; /* Remove box shadow */
+  }
+
+  /* Hide Full Menu on Mobile */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  /* Show menu when active */
+  .nav-menu.active {
+    display: flex;
+  }
+  .navbar img {
+    width: 30px; 
+    position: relative;
+    left: -8%;
+    top: -15px;
+    height: auto;
+  }
+
+  /* Show only Logo & Hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  .main-banner {
+    height: 100vh;
+    background-size: contain; /* Ensure full image is visible */
+    background-position: top;
+    margin-bottom: -620px;
+  }
+  .airob-logo {
+    width: 30%; /* Resize logo for mobile */
+    position: relative;
+    top: -30%;
+    right: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .event-details {
+    margin-top: 35%;
+    width: 100%;
+    padding: 0 8px;
+    position: relative;
+    top: -338px;
+    right: -15px;
+  }
+  .event-details h1 {
+    font-size: 8px;
+  }
+  .event-details p {
+    font-size: 0.26rem;
+  }
+  .register-button {
+    position: relative;
+    margin-top: 10%;
+    top: -40%;
+    font-size: 0.6rem;
+    padding: 3px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 0;
+     border-bottom-left-radius: 0;
+    font-size: 7px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .register-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  .logo-section {
+    height: auto; /* Remove fixed height */
+    padding: 20px 0;
+  }
+  .logo-container {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: -10px;
+ }
+ .logo-box {
+  width: 20vw; /* Adjusts dynamically */
+  height: auto;
+  padding: 5px;
+  border: 2px solid #e2e2e2;
+}
+.about-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+}
+.about-image img {
+  width: 30%;
+  max-width: 300px;
+  top: 0;
+}
+.about-text h2 {
+  font-size: 0.8rem;
+  position: relative;
+  top: -120px;
+  right: -60px;
+}
+.about-text p {
+  font-size: 0.9rem;
+  max-width: 100%;
+  text-align: left;
+  position: relative;
+  top: -120px;
+  right: -60px;
+}
+
+.about-text ul {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.about-text ul li {
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.material-symbols-outlined {
+  font-size: 0.9rem;
+}
+}
